@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Backend/">
+    <Project Path="src/Backend/EsperancaSolidaria.Identity.API/EsperancaSolidaria.Identity.API.csproj" Id="aaf9ad18-580a-43f5-8692-48b99afee4fa" />
+    <Project Path="src/Backend/EsperancaSolidaria.Identity.Application/EsperancaSolidaria.Identity.Application.csproj" Id="3f933da6-8104-4bb2-873a-d71acf55dfff" />
+    <Project Path="src/Backend/EsperancaSolidaria.Identity.Domain/EsperancaSolidaria.Identity.Domain.csproj" Id="e7229d33-d4c7-4846-b0a6-14d6469c391a" />
+    <Project Path="src/Backend/EsperancaSolidaria.Identity.Infrastructure/EsperancaSolidaria.Identity.Infrastructure.csproj" Id="5b46ed07-2e4e-4185-975a-d484a187084a" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/EsperancaSolidaria.Identity.Communication/EsperancaSolidaria.Identity.Communication.csproj" Id="a939f8f2-170c-4f81-8d7a-46a02c7790d1" />
+    <Project Path="src/Shared/EsperancaSolidaria.Identity.Exceptions/EsperancaSolidaria.Identity.Exceptions.csproj" Id="fcbfb8bc-025d-4f17-b01d-9326c406a26c" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>

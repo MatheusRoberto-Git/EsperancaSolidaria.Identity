@@ -1,0 +1,6 @@
+@EsperancaSolidaria.Identity.API_HostAddress = http://localhost:5125
+
+GET {{EsperancaSolidaria.Identity.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,13 @@
+﻿using System.Net;
+
+namespace EsperancaSolidaria.Identity.Exceptions.ExceptionsBase
+{
+    public class InvalidLoginException : EsperancaSolidariaIdentityException
+    {
+        public InvalidLoginException() : base(ResourceMessagesException.EMAIL_OR_PASSWORD_INVALID) { }
+
+        public override IList<string> GetErrorMessages() => [Message];        
+
+        public override HttpStatusCode GetStatusCode() => HttpStatusCode.Unauthorized;
+    }
+}
