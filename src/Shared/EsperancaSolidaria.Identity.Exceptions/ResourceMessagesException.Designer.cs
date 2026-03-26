@@ -61,6 +61,15 @@ namespace EsperancaSolidaria.Identity.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You cannot change your own role..
+        /// </summary>
+        public static string CANNOT_CHANGE_OWN_ROLE {
+            get {
+                return ResourceManager.GetString("CANNOT_CHANGE_OWN_ROLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CPF already registered..
         /// </summary>
         public static string CPF_ALREADY_REGISTERED {

@@ -50,7 +50,7 @@ namespace EsperancaSolidaria.Identity.Application.UseCases.Token.RefreshToken
 
             return new ResponseTokensJson
             {
-                AccessToken = _accessTokenGenerator.Generate(refreshToken.User.UserIdentifier),
+                AccessToken = _accessTokenGenerator.Generate(refreshToken.User.UserIdentifier, refreshToken.User.Role),
                 RefreshToken = newRefreshToken.Value
             };
         }

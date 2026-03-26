@@ -60,7 +60,7 @@ namespace EsperancaSolidaria.Identity.Application.UseCases.User.Register
                 Name = user.Name,
                 Tokens = new ResponseTokensJson
                 {
-                    AccessToken = _accessTokenGenerator.Generate(user.UserIdentifier),
+                    AccessToken = _accessTokenGenerator.Generate(user.UserIdentifier, user.Role),
                     RefreshToken = refreshToken
                 }
             };

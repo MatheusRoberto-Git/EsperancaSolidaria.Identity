@@ -1,7 +1,6 @@
-﻿using EsperancaSolidaria.Identity.Exceptions.ExceptionsBase;
-using System.Net;
+﻿using System.Net;
 
-namespace MyRecipeBook.Exceptions.ExceptionsBase
+namespace EsperancaSolidaria.Identity.Exceptions.ExceptionsBase
 {
     public class NotFoundException : EsperancaSolidariaIdentityException
     {

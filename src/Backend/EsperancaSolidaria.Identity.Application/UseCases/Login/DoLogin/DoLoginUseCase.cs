@@ -45,7 +45,7 @@ namespace EsperancaSolidaria.Identity.Application.UseCases.Login.DoLogin
                 Name = user.Name,
                 Tokens = new ResponseTokensJson
                 {
-                    AccessToken = _accessTokenGenerator.Generate(user.UserIdentifier),
+                    AccessToken = _accessTokenGenerator.Generate(user.UserIdentifier, user.Role),
                     RefreshToken = refreshToken
                 }
             };

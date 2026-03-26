@@ -174,4 +174,7 @@
   <data name="USER_NOT_FOUND" xml:space="preserve">
     <value>User not found.</value>
   </data>
+  <data name="CANNOT_CHANGE_OWN_ROLE" xml:space="preserve">
+    <value>You cannot change your own role.</value>
+  </data>
 </root>

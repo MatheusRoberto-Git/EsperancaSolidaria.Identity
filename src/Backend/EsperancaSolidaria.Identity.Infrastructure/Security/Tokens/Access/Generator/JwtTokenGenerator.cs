@@ -1,4 +1,5 @@
-﻿using EsperancaSolidaria.Identity.Domain.Security.Tokens;
+﻿using EsperancaSolidaria.Identity.Domain.Enums;
+using EsperancaSolidaria.Identity.Domain.Security.Tokens;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,11 +17,12 @@ namespace EsperancaSolidaria.Identity.Infrastructure.Security.Tokens.Access.Gene
             _signingKey = signingKey;
         }
 
-        public string Generate(Guid userIdentifier)
+        public string Generate(Guid userIdentifier, UserRole role)
         {
             var claims = new List<Claim>()
             {
-                new Claim(ClaimTypes.Sid, userIdentifier.ToString())
+                new Claim(ClaimTypes.Sid, userIdentifier.ToString()),
+                new Claim(ClaimTypes.Role, role.ToString())
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor
