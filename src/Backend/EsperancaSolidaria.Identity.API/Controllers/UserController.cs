@@ -1,10 +1,12 @@
-﻿using EsperancaSolidaria.Identity.Application.UseCases.User.Register;
+﻿using EsperancaSolidaria.Identity.API.Attributes;
+using EsperancaSolidaria.Identity.Application.UseCases.User.Register;
+using EsperancaSolidaria.Identity.Application.UseCases.User.UpdateRole;
 using EsperancaSolidaria.Identity.Communication.Requests;
 using EsperancaSolidaria.Identity.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EsperancaSolidaria.Identity.API.Controllers
-{    
+{
     public class UserController : BaseController
     {
         [HttpPost]
@@ -14,6 +16,17 @@ namespace EsperancaSolidaria.Identity.API.Controllers
             var result = await useCase.Execute(request);
 
             return Created(string.Empty, result);
+        }
+
+        [HttpPatch]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status400BadRequest)]
+        [AuthenticatedUser]
+        public async Task<IActionResult> UpdateRole([FromServices] IUpdateRoleUserUseCase useCase, [FromBody] RequestUpdateRoleUserJson request)
+        {
+            await useCase.Execute(request);
+
+            return NoContent();
         }
     }
 }

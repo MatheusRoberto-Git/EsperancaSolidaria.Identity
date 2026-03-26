@@ -33,7 +33,6 @@ namespace EsperancaSolidaria.Identity.Application.UseCases.User.Register
             _refreshTokenGenerator = refreshTokenGenerator;
             _tokenRepository = tokenRepository;
             _accessTokenGenerator = accessTokenGenerator;
-            _accessTokenGenerator = accessTokenGenerator;
         }
 
         public async Task<ResponseRegisteredUserJson> Execute(RequestRegisterUserJson request)

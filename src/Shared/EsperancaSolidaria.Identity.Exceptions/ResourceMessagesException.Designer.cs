@@ -151,6 +151,15 @@ namespace EsperancaSolidaria.Identity.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access denied. The &apos;Authorization&apos; header is required for this request..
+        /// </summary>
+        public static string NO_TOKEN {
+            get {
+                return ResourceManager.GetString("NO_TOKEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The password cannot be empty..
         /// </summary>
         public static string PASSWORD_EMPTY {
@@ -183,6 +192,15 @@ namespace EsperancaSolidaria.Identity.Exceptions {
         public static string UNKNOW_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOW_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User does not have permission to access this resource..
+        /// </summary>
+        public static string USER_WITHOUT_PERMISSION_ACCESS_RESOURCE {
+            get {
+                return ResourceManager.GetString("USER_WITHOUT_PERMISSION_ACCESS_RESOURCE", resourceCulture);
             }
         }
     }

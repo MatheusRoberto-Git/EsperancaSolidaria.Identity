@@ -11,7 +11,7 @@ namespace EsperancaSolidaria.Identity.Infrastructure.Migrations.Versions
                 .WithColumn("Name").AsString(255).NotNullable()
                 .WithColumn("Email").AsString(255).NotNullable()
                 .WithColumn("CPF").AsString(11).NotNullable()
-                .WithColumn("Role").AsInt16().NotNullable()
+                .WithColumn("Role").AsInt32().NotNullable()
                 .WithColumn("Password").AsString(2000).NotNullable()
                 .WithColumn("UserIdentifier").AsGuid().NotNullable();
         }
