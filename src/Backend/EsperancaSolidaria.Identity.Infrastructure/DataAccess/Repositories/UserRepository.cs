@@ -26,8 +26,6 @@ namespace EsperancaSolidaria.Identity.Infrastructure.DataAccess.Repositories
                 .FirstOrDefaultAsync(user => user.Active && user.Email.Equals(email));
         }
 
-        public async Task<User> GetById(long id) => await _dbContext.Users.FirstAsync(user => user.Id == id);
-
         public void Update(User user) => _dbContext.Users.Update(user);
     }
 }
