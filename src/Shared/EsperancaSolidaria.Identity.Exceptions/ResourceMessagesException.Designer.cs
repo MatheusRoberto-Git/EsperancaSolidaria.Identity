@@ -187,11 +187,38 @@ namespace EsperancaSolidaria.Identity.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The role should be different from the current one..
+        /// </summary>
+        public static string ROLE_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("ROLE_ALREADY_REGISTERED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user role cannot be empty..
+        /// </summary>
+        public static string ROLE_EMPTY {
+            get {
+                return ResourceManager.GetString("ROLE_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown error..
         /// </summary>
         public static string UNKNOW_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOW_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User not found..
+        /// </summary>
+        public static string USER_NOT_FOUND {
+            get {
+                return ResourceManager.GetString("USER_NOT_FOUND", resourceCulture);
             }
         }
         

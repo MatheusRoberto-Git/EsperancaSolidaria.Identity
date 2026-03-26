@@ -2,6 +2,7 @@
 using EsperancaSolidaria.Identity.Application.UseCases.Login.DoLogin;
 using EsperancaSolidaria.Identity.Application.UseCases.Token.RefreshToken;
 using EsperancaSolidaria.Identity.Application.UseCases.User.Register;
+using EsperancaSolidaria.Identity.Application.UseCases.User.UpdateRole;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Sqids;
@@ -38,6 +39,7 @@ namespace EsperancaSolidaria.Identity.Application
             services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
             services.AddScoped<IDoLoginUseCase, DoLoginUseCase>();
             services.AddScoped<IUseRefreshTokenUseCase, UseRefreshTokenUseCase>();
+            services.AddScoped<IUpdateRoleUserUseCase, UpdateRoleUserUseCase>();
         }
     }
 }

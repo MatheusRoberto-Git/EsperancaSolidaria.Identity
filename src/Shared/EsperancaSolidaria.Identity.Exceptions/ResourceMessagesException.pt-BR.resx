@@ -165,4 +165,13 @@
   <data name="USER_WITHOUT_PERMISSION_ACCESS_RESOURCE" xml:space="preserve">
     <value>Usuário sem permissão para acessar esse recurso.</value>
   </data>
+  <data name="ROLE_EMPTY" xml:space="preserve">
+    <value>A role do usuário não pode estar vazia.</value>
+  </data>
+  <data name="ROLE_ALREADY_REGISTERED" xml:space="preserve">
+    <value>A role deve ser diferente da atual.</value>
+  </data>
+  <data name="USER_NOT_FOUND" xml:space="preserve">
+    <value>Usuário não encontrado.</value>
+  </data>
 </root>

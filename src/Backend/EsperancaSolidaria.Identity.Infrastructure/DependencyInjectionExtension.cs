@@ -67,6 +67,7 @@ namespace EsperancaSolidaria.Identity.Infrastructure
 
             services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
             services.AddScoped<IUserReadOnlyRepository, UserRepository>();
+            services.AddScoped<IUserUpdateRoleOnlyRepository, UserRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
         }
 
