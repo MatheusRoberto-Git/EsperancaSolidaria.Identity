@@ -66,6 +66,13 @@ namespace EsperancaSolidaria.Identity.Application.UseCases.User.Register
             };
         }
 
+        private void NormalizeRequest(RequestRegisterUserJson request)
+        {
+            request.CPF = request.CPF.Trim().Replace(".", "").Replace("-", "");
+            request.Email = request.Email.Trim().ToLower();
+            request.Name = request.Name.Trim();
+        }
+
         private async Task Validate(RequestRegisterUserJson request)
         {
             var validator = new RegisterUserValidator();
@@ -104,13 +111,6 @@ namespace EsperancaSolidaria.Identity.Application.UseCases.User.Register
             await _unitOfWork.Commit();
 
             return refreshToken;
-        }
-
-        private void NormalizeRequest(RequestRegisterUserJson request)
-        {
-            request.CPF = request.CPF.Trim().Replace(".", "").Replace("-", "");
-            request.Email = request.Email.Trim().ToLower();
-            request.Name = request.Name.Trim();
-        }
+        }        
     }
 }
