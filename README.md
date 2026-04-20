@@ -138,3 +138,7 @@ kubectl get pods -l app=identity-api
 | `Settings__Jwt__SigningKey` | Chave de assinatura do JWT |
 | `Settings__Jwt__ExpirationTimeMinutes` | Tempo de expiração do token |
 | `Settings__IdCryptographyAlphabet` | Alfabeto para Sqids |
+
+## Arquitetura
+
+![Arquitetura Conexão Solidária](architecture.svg)
