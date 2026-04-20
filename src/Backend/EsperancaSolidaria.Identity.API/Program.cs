@@ -5,6 +5,7 @@ using EsperancaSolidaria.Identity.API.Token;
 using EsperancaSolidaria.Identity.Application;
 using EsperancaSolidaria.Identity.Domain.Security.Tokens;
 using EsperancaSolidaria.Identity.Infrastructure;
+using EsperancaSolidaria.Identity.Infrastructure.DataAccess;
 using EsperancaSolidaria.Identity.Infrastructure.Extensions;
 using EsperancaSolidaria.Identity.Infrastructure.Migrations;
 using Microsoft.OpenApi;
@@ -42,6 +43,9 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddHealthChecks();
+builder.Services.AddHealthChecks().AddDbContextCheck<EsperancaSolidariaIdentityDbContext>();
+
 var app = builder.Build();
 
 if(app.Environment.IsDevelopment())
@@ -55,6 +59,8 @@ app.UseMiddleware<CultureMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+
+app.MapHealthChecks("/health");
 
 MigrateDatabase();
 
